@@ -12,4 +12,7 @@ Neste projeto, disponibilizei funções básicas de um blog que podem ser altera
 Trarei também uma versão mais completa para venda, através do meu site, que estou refazendo.
 
 Aceito comentários, sugestões e críticas construtivas.
+
+O projeto ainda está em andamento, deve estar finalizado no mês 10/2018.
+
 Até mais!
