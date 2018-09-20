@@ -11,13 +11,27 @@
 
         public function cadastra(){
 
+            $email = $this->input->post('email');
+            
+            $this->db->where('email',$this->input->post('email'));
+            $ja_cadastrado = $this->db->count_all('usuarios');
+            
+            if ($ja_cadastrado) {
+                return "email";
+            }            
+
             $dados = array(
                'nome' => $this->input->post('nome'),
                'email' => $this->input->post('email'),
-               'senha' => password_hash($this->input->post('senha'),PASSWORD_DEFAULT)
+               'senha' => password_hash($this->input->post('senha'),PASSWORD_DEFAULT),
+               'nivel' => 1,
             );
             
-            return $this->db->insert('usuarios', $dados);
+            if($this->db->insert('usuarios', $dados)){
+                return 1;
+            }else{
+                return 2;
+            }
         }
 
 

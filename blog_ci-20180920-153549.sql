@@ -1,7 +1,7 @@
 --
 -- DbNinja v3.2.7 for MySQL
 --
--- Dump date: 2018-09-20 18:12:42 (UTC)
+-- Dump date: 2018-09-20 18:39:23 (UTC)
 -- Server version: 10.1.34-MariaDB
 -- Database: blog_ci
 --
@@ -54,10 +54,10 @@ CREATE TABLE `usuarios` (
   `nome` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `senha` varchar(60) DEFAULT NULL,
-  `nivel` tinyint(1) DEFAULT NULL COMMENT '0 padrão, 1 admin, 2 HIERARCA',
+  `nivel` tinyint(1) DEFAULT '0' COMMENT '0 padrão, 1 admin, 2 HIERARCA',
   PRIMARY KEY (`id_usu`),
   UNIQUE KEY `new_index_1` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 
 --
@@ -90,7 +90,7 @@ COMMIT;
 LOCK TABLES `usuarios` WRITE;
 ALTER TABLE `usuarios` DISABLE KEYS;
 
--- Table contains no data
+INSERT INTO `usuarios` (`id_usu`,`nome`,`email`,`senha`,`nivel`) VALUES (19,'asdf','luizedmg@gmail.com','$2y$10$ZQm1TtB.tas.99Sn3o0m9e9yLoKLcuO9ABw7I6lvAuvAAX62RYWWy',NULL);
 
 ALTER TABLE `usuarios` ENABLE KEYS;
 UNLOCK TABLES;
