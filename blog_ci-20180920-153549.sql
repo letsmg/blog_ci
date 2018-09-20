@@ -1,7 +1,7 @@
 --
 -- DbNinja v3.2.7 for MySQL
 --
--- Dump date: 2018-09-20 15:35:49 (UTC)
+-- Dump date: 2018-09-20 18:12:42 (UTC)
 -- Server version: 10.1.34-MariaDB
 -- Database: blog_ci
 --
@@ -55,8 +55,9 @@ CREATE TABLE `usuarios` (
   `email` varchar(50) DEFAULT NULL,
   `senha` varchar(60) DEFAULT NULL,
   `nivel` tinyint(1) DEFAULT NULL COMMENT '0 padrão, 1 admin, 2 HIERARCA',
-  PRIMARY KEY (`id_usu`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id_usu`),
+  UNIQUE KEY `new_index_1` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 
 --
