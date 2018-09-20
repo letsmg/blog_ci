@@ -14,7 +14,7 @@
             $email = $this->input->post('email');
             
             $this->db->where('email',$this->input->post('email'));
-            $ja_cadastrado = $this->db->count_all('usuarios');
+            $ja_cadastrado = $this->db->count_all_results('usuarios');
             
             if ($ja_cadastrado) {
                 return "email";
