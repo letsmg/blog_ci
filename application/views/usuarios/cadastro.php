@@ -9,6 +9,8 @@
 
         <form id='cadusu' class='form-horizontal'>
             
+            <input type="hidden" name="csrf_test_name" value="<?= $this->security->get_csrf_hash(); ?>" />
+             
             <div class='form-group'>
                 <label for='nome'></label>
                 <input type='text' id='nome' name='nome' class='form-control' required>
@@ -44,19 +46,20 @@
 
 <script>
     $(document).ready(function(){
-        $('#cadusu').on('submit',function(){
+        $('#cadusu').on('submit',function(e){
             if(e.isDefaultPrevented()) {
                 /*NAO PRECISA FAZER NADA QUE JA DA O AVISO, o codigo abaixo nao funfa aqui
                 * $('html, body').animate({ scrollTop: 0 }, 500);
-                * */     
+                * */
             } else {
                 e.preventDefault();
                 $.ajax({
                     type: 'post', 
-                    url: 'usuarios/cadastra',
-                    data: $('cadusu').serialize(),
-                    success: function(){
-                        $('#ret_cad').html("teste");
+                    url: "<?= base_url('usuarios/cadastra'); ?>",
+                    data: $('#cadusu').serialize(),
+                    success: function(msg){
+                        $('#ret_cad').html(msg.msg);
+                        $("input[name='csrf_test_name']").val(msg.csrf);                        
                     }
                 });
             }
