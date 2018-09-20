@@ -1,7 +1,7 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 ?>            
-        <footer class="text-center ">
+        <footer class="text-center mt-auto bg-secondary text-white py-3">
             Blog CI - Template Básico para Desenvolvedores 2018
             <br>
             Dinsponível por <a href="http://www.sitesluiz.esy.es/home/antigo">Luiz</a>
