@@ -2,7 +2,7 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<main class="container ">
+<main class="container d-flex flex-column">
     
     <h1 class='text-center'>Bem-vindo ao Super Blog</h1>
     

@@ -1,0 +1,220 @@
+/* isso aqui nao funciona mesmo
+$margr: margin-right;
+$margl: margin-left;
+$margt: margin-top;
+$margb: margin-bottom;
+
+$padr: padding-right;
+$padl: padding-left;
+$padt: padding-top;
+$padb: padding-bottom;
+*/
+
+.bg-branco {
+  background-color: white;
+}
+
+.bg-tema {
+  background-color: #337AB7 !important;
+}
+
+.border-tema {
+  border-color: #337AB7 !important;
+}
+
+.btn-tema {
+  background-color: #337AB7 !important;
+  color: white;
+}
+
+.bg-tema-esc {
+  background-color: #9C5959 !important;
+}
+
+.border-tema-esc {
+  border-style: ridge;
+  border-width: 1px;
+  border-color: #9C5959 !important;
+}
+
+.border-y-tema-esc {
+  border-style: ridge;
+  border-width: 1px;
+  border-bottom-color: #9C5959 !important;
+  border-top-color: #9C5959 !important;
+}
+
+.btn-tema-esc {
+  background-color: #9C5959 !important;
+  color: white;
+}
+
+.bg-tema {
+  background-color: #337AB7 !important;
+}
+
+.border-tema {
+  border-color: #337AB7 !important;
+}
+
+.btn-tema {
+  background-color: #337AB7 !important;
+  color: white;
+}
+
+.bg-tema-esc {
+  background-color: #337AB7 !important;
+}
+
+.border-tema-esc {
+  border-style: ridge;
+  border-width: 1px;
+  border-color: #337AB7 !important;
+}
+
+.border-y-tema-esc {
+  border-style: ridge;
+  border-width: 1px;
+  border-bottom-color: #337AB7 !important;
+  border-top-color: #337AB7 !important;
+}
+
+.btn-tema-esc {
+  background-color: #2c6699 !important;
+  color: white;
+}
+
+.text-tema {
+  color: #337AB7 !important;
+}
+
+.bg-verde {
+  background-color: #1D9B72 !important;
+  color: white !important;
+}
+
+.bg-verde:hover {
+  background-color: #398439 !important;
+  border-color: #255625 !important;
+}
+
+.bg-verde-claro {
+  background-color: #4DBFBF !important;
+  color: white !important;
+}
+
+.bg-amarelo {
+  background-color: #F0AD4E !important;
+  color: white !important;
+}
+
+.bg-amarelo:hover {
+  background-color: #d58512 !important;
+  border-color: #985f0d !important;
+}
+
+.bg-vermelho {
+  background-color: #D9534F !important;
+  color: white !important;
+}
+
+.bg-laranja {
+  background-color: #FF6666 !important;
+  color: white !important;
+}
+
+.bg-cinza {
+  background-color: #cccccc !important;
+}
+
+.bg-cinza-c {
+  background-color: #f8f8f8 !important;
+}
+
+.bg-azul {
+  background-color: #337AB7 !important;
+  color: white !important;
+}
+
+.bg-salmao {
+  background-color: #ffeae2 !important;
+}
+
+/*usados para menu e rodape*/
+
+.bg-m-verde {
+  background-color: #009999 !important;
+  color: white !important;
+}
+
+.border-m-verde {
+  border-color: #009999 !important;
+}
+
+.bg-m-amarelo {
+  background-color: #FFF059 !important;
+}
+
+.panel-verde {
+  border-color: #1D9B72 !important;
+}
+
+.panel-verde > .panel-heading {
+  background-color: #1D9B72 !important;
+  color: white !important;
+  /*text-shadow: 7px 7px #188561;
+    padding: 5px;*/
+}
+
+.panel-amarelo {
+  border-color: #F0AD4E !important;
+}
+
+.panel-amarelo > .panel-heading {
+  background-color: #F0AD4E !important;
+  color: white !important;
+  /*text-shadow: 7px 7px #188561;
+    padding: 5px;*/
+}
+
+.panel-vermelho {
+  border-color: #D9534F !important;
+}
+
+.panel-vermelho > .panel-heading {
+  background-color: #D9534F !important;
+  color: white !important;
+}
+
+.panel-laranja {
+  border-color: #FF6666 !important;
+  /*text-shadow: 7px 7px #188561;
+    padding: 5px;*/
+}
+
+.panel-laranja > .panel-heading {
+  background-color: #FF6666 !important;
+  color: white !important;
+}
+
+/*PARTE FEITA PARA CORRIGIR ERROS DOS TABBED PANELS
+NOS EXEMPLOS NA NET FUNCIONA NORMAL, NAO SEI PQ AQUI DEU PROBLEMA
+COM O PANEL-PRIMARY
+*/
+
+/*
+li .active{
+    background-color: #999999 $imp;
+}
+
+.nav-tabs > li > a{
+    //background-color: #D9534F $imp;
+    color: white $imp;
+}
+
+.nav-tabs > li > a:hover{
+    background-color: $cinza $imp;
+    color: white $imp;
+}
+*/
+

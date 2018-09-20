@@ -1,8 +1,11 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<main class="container">
-    <section class="col-sm-6 offset-sm-3">
+<main class="container d-flex flex-column">
+
+    <section class="col-sm-6 offset-sm-3 mt-100">
+
+        <h2>Cadastro de Usuário</h2>
 
         <form id='cadusu' class='form-horizontal'>
             
@@ -14,13 +17,13 @@
 
             <div class='form-group'>
                 <label for='email'></label>
-                <input type='text' id='email' name='email' class='form-control' required>
+                <input type='email' id='email' name='email' class='form-control' required>
                 <div class='text-muted small'>E-mail</div>
             </div>
 
             <div class='form-group'>
                 <label for='senha'></label>
-                <input type='text' id='senha' name='senha' class='form-control' required>
+                <input type='password' id='senha' name='senha' class='form-control' required>
                 <div class='text-muted small'>Senha</div>
             </div>
 
