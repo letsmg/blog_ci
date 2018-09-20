@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuarios extends CI_Controller {
 
+    public function conta_usuarios()
+    {
+        return $this->db->count('usuarios')->row();
+    }
+
 
     public function cadastro(){
         $this->load->view('principal/cabecalho.php');

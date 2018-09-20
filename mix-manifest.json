@@ -1,4 +1,6 @@
 {
+    "/scss/geral/css/diversos.css": "/scss/geral/css/diversos.css",
+    "/scss/geral/css/margens.css": "/scss/geral/css/margens.css",
     "/js/jquery.js": "/js/jquery.js",
     "/js/bootstrap.js": "/js/bootstrap.js",
     "/css/principal.css": "/css/principal.css"

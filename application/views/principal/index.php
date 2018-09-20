@@ -1,4 +1,8 @@
-<main class="container">
+<?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+
+<main class="container ">
     
     <h1 class='text-center'>Bem-vindo ao Super Blog</h1>
     
@@ -22,5 +26,5 @@
         ?>
     
     </article>
+
 </main>
-    

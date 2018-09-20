@@ -1,9 +1,5 @@
 <?php
-    defined('BASEPATH') OR exit('No direct script access allowed');
-
-    header("Access-Control-Allow-Origin: *");
-  header("Access-Control-Allow-Methods: POST");
-  header("Access-Control-Allow-Headers: Origin, Methods, Content-Type");
+    defined('BASEPATH') OR exit('No direct script access allowed');   
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,10 +9,10 @@
     <title>Blog CI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="<?= base_url('js/jquery.js'); ?>"></script>
+    <script src="<?= base_url('js/bootstrap.js'); ?>"></script>
     
-    <?= link_tag('css/principal.css'); ?>    
+    <?= link_tag(base_url('css/principal.css')); ?>    
     
 </head>
 <body>

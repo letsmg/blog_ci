@@ -1,7 +1,10 @@
+<?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <main class="container">
-    <article class="col-sm-8 offset-sm-2">
+    <section class="col-sm-6 offset-sm-3">
 
-        <form id='yy' class='form-horizontal'>
+        <form id='cadusu' class='form-horizontal'>
             
             <div class='form-group'>
                 <label for='nome'></label>
@@ -30,10 +33,60 @@
             </div>
         </form>
 
-    </article>
+        <div id='ret_cad'></div>
+
+    </section>
 </main>
 
 
 <script>
-    ajax
+    $(document).ready(function(){
+        if(e.isDefaultPrevented()) {
+            /*NAO PRECISA FAZER NADA QUE JA DA O AVISO, o codigo abaixo nao funfa aqui
+            * $('html, body').animate({ scrollTop: 0 }, 500);
+            * */     
+        } else {
+            e.preventDefault();
+            $.ajax({
+                type: 'post', 
+                url: 'usuarios/cadastra',
+                data: $('cadusu').serialize(),
+                success: function(){
+                    $('#ret_cad').html("teste");
+                }
+            });
+        }
+    });
+
+
+    $('#excluir').on('click', function (e){
+        var confirma = confirm(
+    ); 
+        if(confirma){
+            if(e.isDefaultPrevented()){
+                /*NAO PRECISA FAZER NADA QUE JA DA O AVISO, o codigo abaixo nao funfa aqui
+                 * $('html, body').animate({ scrollTop: 0 }, 500);
+                 * */
+            }else{
+                e.preventDefault();
+                $.ajax({
+                    url: '<?= base_url(''); ?>',
+                    type: 'POST',
+                    data: 'codigo='+$('#codigo').val()+'&csrf_test_name='+$('[name=csrf_test_name]').val(),
+                    dataType: 'json',
+                    success: function (msg) {
+                        $('[name=csrf_test_name]').val(msg.csrf);
+                        $('').hide('fast');
+                        $('').html(msg.msg);
+                        $('').show('fast');
+                        $('html, body').animate({scrollTop: $('#ret_alt_jogador').offset().top-70}, 500);
+                        setTimeout(function(){
+                            window.location.href='../lista';
+                        }, 2000);
+                    }
+                });
+            }
+        }
+    });
+
 </script>

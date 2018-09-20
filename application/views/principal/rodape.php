@@ -1,4 +1,13 @@
-<footer class="footer">Blog CI</footer>
-
-</body>
+<?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+?>            
+        <footer class="text-center ">
+            Blog CI - Template Básico para Desenvolvedores 2018
+            <br>
+            Dinsponível por <a href="http://www.sitesluiz.esy.es/home/antigo">Luiz</a>
+            <br>
+            Tecnologias usadas: PHP, Jquery, Boostrap 4, Laravel Mix, MariaDb
+        </footer>
+        
+    </body>
 </html>
