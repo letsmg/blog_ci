@@ -14,7 +14,7 @@
             $dados = array(
                'nome' => $this->input->post('nome'),
                'email' => $this->input->post('email'),
-               'senha' => $this->input->post('senha')
+               'senha' => password_hash($this->input->post('senha'))
             );
 
             return $this->db->insert('usuarios', $dados);
