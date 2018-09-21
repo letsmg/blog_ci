@@ -41,34 +41,23 @@
         $('#login').on('submit',function(e){
             e.preventDefault();
             $.ajax({
-                url: '{{ url('login/verifica') }}
+                url: '<?= base_url('login/verifica'); ?>',
                 data: $(this).serialize(),
                 type: 'post',
                 dataType: 'json',
                 success: function(data){
-                console.log(data);
-                    $('#ret_login').hide(400);
-                    setTimeout(() => {
-                        $('#ret_login').show(400).html(data.msg);
-                    }, 500);
-                },
-                error: function( data )
-                {
-                    $('#ret_login').removeClass('alert-success');
-                    $('#ret_login').addClass('alert-danger');
-                    $('#ret_login').html('');
-                    if(!data.responseJSON){
-                        console.log(data.responseText);
-                        $('#ret_login').removeClass('invisible').html(data.responseText);
-                    }else{
-                        $('#ret_login').html('');
-                        $.each(data.responseJSON.errors, function (key, value) {
-                            //$('#ret_login').removeClass('invisible').append(key+': '+value+'<br>');
-                            //console.log(key);
-                            $('#ret_login').removeClass('invisible').append(value+'<br>');
-                        });
-                    }
-                }
+                    console.log(data);
+                    if (data.msg == 1) {
+                        alert('asdf');
+                        //location.href = "admin";
+                    } else {
+                        $('#ret_login').hide(400);
+                        setTimeout(() => {
+                            $('#ret_login').show(400).html(data.msg);
+                        }, 500);    
+                        $("input[name='csrf_test_name']" ).val(data.csrf);
+                    }                    
+                }                
             });
         });
     });

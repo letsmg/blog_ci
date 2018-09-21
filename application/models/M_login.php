@@ -1,12 +1,21 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Home extends CI_Model {
+    class M_login extends CI_Model {
 
         public function verifica_login(){
-            $this->db->where('email',$this->input->post('email'));           
-            $this->db->where('senha',password_hash($this->input->post('senha')),PASSWORD_DEFAULT);
-            return $this->db->get()->result();
+            
+            $this->db->where('email',$this->input->post('email'));
+            $dados = $this->db->get('usuarios')->result();
+
+            if(password_verify($this->input->post('senha'),$dados->senha)){
+                $info = ['codigo'=> $dados->id_usu];
+                $this->session->set_userdata($info);
+                
+                return true;
+            }else{
+                return false;
+            }
         }
 
         
