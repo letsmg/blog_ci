@@ -25,7 +25,12 @@ class Usuarios extends CI_Controller {
             $msg = "<div class='alert alert-danger'>E-mail já cadastrado</div>";
         }else{
             if ($retorno == 1) {
-                $msg = "<div class='alert alert-success'>Cadastrado com sucesso</div>";
+                $msg = "<div class='alert alert-success'>Cadastrado com sucesso. 
+                            Faça Login agora para começar a usar. <br>                            
+                        </div>
+                        <br>
+                        <a href='../login' class='btn btn-tema fa fa-id-card align-align-items-center'> Login </a>";
+
             } else {
                 $msg = "<div class='alert alert-danger'>Erro ao cadastrar, por favor tente novamente.</div>";
             }
