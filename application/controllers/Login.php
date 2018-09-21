@@ -10,5 +10,16 @@
             $this->load->view('principal/rodape.php');
         }
 
+        public function verifica()
+        {
+            $this->load->model('m_login');
+            $analisa = $this->m_login->verifica_login();
+
+            if($analisa == true){
+                
+            }else{
+
+            }
+        }
         
     }
