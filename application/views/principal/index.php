@@ -7,10 +7,14 @@
     <h1 class='text-center'>
         Bem-vindo ao 
         <?php
-            var_dump($artigos);
+            if (is_null($nome)) {
+                echo "Nome Temporário!";
+            } else {
+                echo $nome->nome_blog;
+            }            
         ?>
 
-        Super Blog</h1>
+        </h1>
     
     <article class="col-sm-8 offset-sm-2 text-center">
         <?php
