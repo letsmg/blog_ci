@@ -4,7 +4,13 @@
 
 <main class="container d-flex flex-column pt-100">
     
-    <h1 class='text-center'>Bem-vindo ao Super Blog</h1>
+    <h1 class='text-center'>
+        Bem-vindo ao 
+        <?php
+            var_dump($artigos);
+        ?>
+
+        Super Blog</h1>
     
     <article class="col-sm-8 offset-sm-2 text-center">
         <?php

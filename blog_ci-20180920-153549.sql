@@ -1,7 +1,7 @@
 --
 -- DbNinja v3.2.7 for MySQL
 --
--- Dump date: 2018-09-20 18:39:23 (UTC)
+-- Dump date: 2018-09-22 02:53:57 (UTC)
 -- Server version: 10.1.34-MariaDB
 -- Database: blog_ci
 --
@@ -13,7 +13,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 /*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 
 CREATE DATABASE `blog_ci` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
@@ -25,8 +24,17 @@ USE `blog_ci`;
 CREATE TABLE `artigos` (
   `id_artigo` int(11) NOT NULL AUTO_INCREMENT,
   `id_usu` int(11) DEFAULT NULL,
-  `titulo` int(11) DEFAULT NULL,
-  `conteudo` int(11) DEFAULT NULL,
+  `img_destaque` varchar(100) DEFAULT NULL,
+  `titulo` varchar(70) DEFAULT NULL,
+  `subtitulo` varchar(70) DEFAULT NULL,
+  `secao` varchar(250) DEFAULT NULL,
+  `img` varchar(100) DEFAULT NULL,
+  `subtitulo2` varchar(250) DEFAULT NULL,
+  `secao2` varchar(250) DEFAULT NULL,
+  `img2` varchar(100) DEFAULT NULL,
+  `subtitulo3` varchar(250) DEFAULT NULL,
+  `secao3` varchar(250) DEFAULT NULL,
+  `img3` varchar(100) DEFAULT NULL,
   `dt_publicacao` int(11) DEFAULT NULL,
   `ativo` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_artigo`),
@@ -40,10 +48,11 @@ CREATE TABLE `artigos` (
 --
 CREATE TABLE `preferencias` (
   `id_preferencia` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_blog` varchar(50) DEFAULT NULL,
   `num_destaques` int(11) DEFAULT NULL,
   `cor_tema` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_preferencia`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 
 --
@@ -57,44 +66,8 @@ CREATE TABLE `usuarios` (
   `nivel` tinyint(1) DEFAULT '0' COMMENT '0 padrão, 1 admin, 2 HIERARCA',
   PRIMARY KEY (`id_usu`),
   UNIQUE KEY `new_index_1` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
 
-
---
--- Data for table: artigos
---
-LOCK TABLES `artigos` WRITE;
-ALTER TABLE `artigos` DISABLE KEYS;
-
--- Table contains no data
-
-ALTER TABLE `artigos` ENABLE KEYS;
-UNLOCK TABLES;
-COMMIT;
-
---
--- Data for table: preferencias
---
-LOCK TABLES `preferencias` WRITE;
-ALTER TABLE `preferencias` DISABLE KEYS;
-
--- Table contains no data
-
-ALTER TABLE `preferencias` ENABLE KEYS;
-UNLOCK TABLES;
-COMMIT;
-
---
--- Data for table: usuarios
---
-LOCK TABLES `usuarios` WRITE;
-ALTER TABLE `usuarios` DISABLE KEYS;
-
-INSERT INTO `usuarios` (`id_usu`,`nome`,`email`,`senha`,`nivel`) VALUES (19,'asdf','luizedmg@gmail.com','$2y$10$ZQm1TtB.tas.99Sn3o0m9e9yLoKLcuO9ABw7I6lvAuvAAX62RYWWy',NULL);
-
-ALTER TABLE `usuarios` ENABLE KEYS;
-UNLOCK TABLES;
-COMMIT;
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
@@ -103,5 +76,4 @@ COMMIT;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 
