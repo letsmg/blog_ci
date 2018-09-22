@@ -14,8 +14,8 @@
           Artigos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Novo Artigo</a>
-          <a class="dropdown-item" href="#">Listar Artigos</a>          
+          <a class="dropdown-item" href="artigos/novo">Novo Artigo</a>
+          <a class="dropdown-item" href="artigos/listar">Listar Artigos</a>          
         </div>
       </li>      
       <li class="nav-item">
@@ -24,7 +24,7 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
