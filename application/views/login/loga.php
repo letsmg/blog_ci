@@ -17,7 +17,7 @@
 
                     <div class='form-group'>
                         <label for='senha'></label>
-                        <input type='text' id='senha' name='senha' class='form-control'
+                        <input type='password' id='senha' name='senha' class='form-control'
                        required maxlength='30'>
                         <div class='text-muted small'>Senha</div>
                     </div>
