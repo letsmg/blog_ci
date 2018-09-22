@@ -11,18 +11,20 @@
         }
 
         public function verifica()
-        {
+        {            
             $this->load->model('m_login');
             $analisa = $this->m_login->verifica_login();
             
-            if($analisa == true){
+            if($analisa == true){                
                 $msg = 1;
-            }else{
+            }else{                
                 $msg = "<div class='alert alert-danger'>Dados inconsistentes. Confira e tente novamente.</div>";
             }
+            echo json_encode($analisa);
+            /*
             $ret = ['csrf' => $this->security->get_csrf_hash(),
                     'msg' => $msg   ];
-            json_encode($ret);
+            echo json_encode($ret);*/
         }
         
     }

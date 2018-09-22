@@ -24,7 +24,9 @@
                     
 
                     <div class='form-group'>
-                        <div id='ret_login' class='alert alert-success invisible'></div>
+                        
+                        <div id='ret_login' class='alert alert-success '></div>
+
                         <button class='btn btn-tema' type='submit'>
                             <span class='fa fa-user-secret'></span>
                             Logar

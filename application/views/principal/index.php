@@ -2,11 +2,11 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<main class="container d-flex flex-column">
+<main class="container d-flex flex-column pt-100">
     
     <h1 class='text-center'>Bem-vindo ao Super Blog</h1>
     
-    <article class="col-sm-8 offset-sm-2">
+    <article class="col-sm-8 offset-sm-2 text-center">
         <?php
             if(!isset($posts)){
         ?>

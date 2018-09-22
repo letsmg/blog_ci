@@ -5,7 +5,7 @@
 
         public function conta_usuarios()
         {
-            $this->db->count_all('usuarios');
+            return $this->db->count_all_results('usuarios');
         }
 
 
