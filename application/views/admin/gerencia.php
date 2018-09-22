@@ -1,3 +1,7 @@
+<?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    //var_dump($_SESSION);
+?>
 <main class="container "></main>
     <div class="row d-flex flex-column align-items-center">
         <aside class="col-sm-3"></aside>

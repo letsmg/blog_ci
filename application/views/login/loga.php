@@ -21,10 +21,10 @@
                        required maxlength='30'>
                         <div class='text-muted small'>Senha</div>
                     </div>
-                    
+
 
                     <div class='form-group'>
-                        
+
                         <div id='ret_login' ></div>
 
                         <button class='btn btn-tema' type='submit'>
@@ -56,10 +56,10 @@
                         $('#ret_login').hide(400);
                         setTimeout(() => {
                             $('#ret_login').show(400).html(data.msg);
-                        }, 500);    
+                        }, 500);
                         $("input[name='csrf_test_name']" ).val(data.csrf);
-                    }                    
-                }                
+                    }
+                }
             });
         });
     });

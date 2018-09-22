@@ -9,16 +9,19 @@
 
             if (!empty($dados->senha)){
                 if(password_verify($this->input->post('senha'),$dados->senha)){
-                    //$info = ['codigo'=> $dados->id_usu];
-                    //$this->session->set_userdata($info);                
+                    $info = ['codigo'=> $dados->id_usu];
+                    $this->session->set_userdata($info);
                     return true;
                 }else{
                     return false;
-                }    
+                }
             } else {
                 return false;
             }
         }
-        
-        
+
+
+
+
+
     }
