@@ -13,7 +13,7 @@
 
             $this->load->view('principal/cabecalho.php');
 
-            if($usuarios === null){ //se nao tem nenhum usuário no banco, pede para cadastrar
+            if(empty($usuarios)){ //se nao tem nenhum usuário no banco, pede para cadastrar
                 $this->load->view('principal/primeiro_acesso.php');
             }else{
                 $this->load->model('m_preferencias');

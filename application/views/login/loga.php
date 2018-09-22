@@ -25,7 +25,7 @@
 
                     <div class='form-group'>
                         
-                        <div id='ret_login' class='alert alert-success '></div>
+                        <div id='ret_login' ></div>
 
                         <button class='btn btn-tema' type='submit'>
                             <span class='fa fa-user-secret'></span>
@@ -50,8 +50,8 @@
                 success: function(data){
                     console.log(data);
                     if (data.msg == 1) {
-                        alert('asdf');
-                        //location.href = "admin";
+                        //alert('asdf');
+                        location.href = "admin";
                     } else {
                         $('#ret_login').hide(400);
                         setTimeout(() => {

@@ -20,11 +20,11 @@
             }else{                
                 $msg = "<div class='alert alert-danger'>Dados inconsistentes. Confira e tente novamente.</div>";
             }
-            echo json_encode($analisa);
-            /*
+            //echo json_encode($analisa);
+            
             $ret = ['csrf' => $this->security->get_csrf_hash(),
                     'msg' => $msg   ];
-            echo json_encode($ret);*/
+            echo json_encode($ret);
         }
         
     }

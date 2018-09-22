@@ -12,9 +12,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
       </li>
+      <?php /*
+      pode ser usado para seguidores comentar os posts
       <li class="nav-item">        
-        <a class="nav-link" href="usuarios/cadastro">Cadastre-se</a>
+        <a class="nav-link" href="seguidores/cadastro">Cadastre-se</a>
       </li>
+      */ ?>
       <li class="nav-item">        
         <a class="nav-link" href="<?= base_url('login'); ?>">Login</a>
       </li>
