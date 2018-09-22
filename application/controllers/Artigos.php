@@ -14,8 +14,17 @@
         {
             $this->load->view('principal/cabecalho.php');
             $this->load->view('admin/menu_admin');
-            $this->load->view('artigos/cadastro.php');
+            $this->load->view('artigos/cad_artigo.php');
             $this->load->view('principal/rodape.php');
         }
+
+        public function cadastra()
+        {
+            $this->load->model('m_artigos');
+            $this->m_artigos->cad_artigo();
+
+            
+        }
+        
                 
     }

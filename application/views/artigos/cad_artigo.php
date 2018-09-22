@@ -56,10 +56,7 @@
                             placeholder='Seção 3' class='form-control'></textarea>
                         <div class='text-muted small'></div>
                     </div>
-                    
 
-                    
-                
                     <div class='form-group'>
                         <div id='' class='alert alert-success invisible'></div>
                         <button class='btn btn-tema' type='submit'>
@@ -72,3 +69,26 @@
         </div>
     </section>
 </main>
+
+
+<script>
+    $(document).ready(function(){
+        $('#cadart').on('submit',function(e){
+            e.preventDefault();
+            $.ajax({
+                url: '<?= base_url('artigos/cadastra'); ?>',                
+                data: $(this).serialize(),
+                type: 'post',
+                dataType: 'json',
+                success: function(data){
+                console.log(data);
+                    $('#ret_cad_art').hide(400);
+                    setTimeout(() => {
+                        $('#ret_cad_art').show(400).html(data.msg);
+                        $('#ret_cad_art').show(400).html(data.csrf);
+                    }, 500);
+                }
+            });
+        });
+    });
+</script>
