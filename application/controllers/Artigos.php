@@ -3,6 +3,15 @@
 
     class Artigos extends CI_Controller {
 
+        public function __construct(){
+            parent::__construct();
+
+            if(!$this->session->userdata('codigo')){
+                redirect(base_url());
+            }
+        }
+
+
         public function index(){
             $this->load->view('principal/cabecalho.php');
             $this->load->view('principal/menu_admin');
@@ -20,10 +29,19 @@
 
         public function cadastra()
         {
-            $this->load->model('m_artigos');
-            $this->m_artigos->cad_artigo();
+            $this->load->model('m_artigo');
+            $retorno = $this->m_artigo->cad_artigo();
 
-            
+            if($retorno == 1){
+                $msg = "<div class='alert alert-success'>Artigo salvo com sucesso.</div>";
+            }else if ($retorno == 2) {
+                $msg = "<div class='alert alert-danger'>Artigo com esse título já salvo</div>";
+            }else{
+                $msg = "<div class='alert alert-danger'>Erro ao salvar artigo</div>";
+            }
+            $ret = ['csrf' => $this->security->get_csrf_hash(),
+                    'msg' => $msg   ];
+            echo json_encode($ret);            
         }
         
                 
