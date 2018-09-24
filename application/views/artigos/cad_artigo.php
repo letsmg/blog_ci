@@ -1,13 +1,13 @@
-<main class="container"></main>
+<main class="container">
     <section class="col-sm-6 offset-sm-3 pt-50">
 
-        <div class="card my-5">            
+        <div class="card my-5 bg-cinza-c">
             <div class="card-body">
                 <h5 class="card-title">Novo artigo</h5>
-                
+
                 <form id='cadart' class='form-horizontal'>
                     <input type="hidden" name="csrf_test_name" value="<?= $this->security->get_csrf_hash(); ?>" />
-                
+
                     <div class='form-group'>
                         <label for='titulo'></label>
                         <input type='text' id='titulo' name='titulo' class='form-control'
@@ -58,7 +58,7 @@
                     </div>
 
                     <div class='form-group'>
-                        <div id='' class='alert alert-success invisible'></div>
+                        <div id='ret_cad_art'></div>
                         <button class='btn btn-tema' type='submit'>
                             <span class='fa fa-send'></span>
                             Enviar
@@ -76,7 +76,7 @@
         $('#cadart').on('submit',function(e){
             e.preventDefault();
             $.ajax({
-                url: '<?= base_url('artigos/cadastra'); ?>',                
+                url: '<?= base_url('artigos/cadastra'); ?>',
                 data: $(this).serialize(),
                 type: 'post',
                 dataType: 'json',
@@ -85,7 +85,7 @@
                     $('#ret_cad_art').hide(400);
                     setTimeout(() => {
                         $('#ret_cad_art').show(400).html(data.msg);
-                        $('#ret_cad_art').show(400).html(data.csrf);
+                        $("input[name='csrf_test_name']" ).val(data.csrf);
                     }, 500);
                 }
             });

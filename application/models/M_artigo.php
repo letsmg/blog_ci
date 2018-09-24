@@ -3,9 +3,11 @@
 
     class M_artigo extends CI_Model {
 
-        public function lista_artigos(){            
-            return $this->db->get('artigos')->result();
-            //var_dump($posts);
+        public function lista_artigos(){
+            $this->db->select('art.*');
+            $this->db->select('u.nome as usuario');
+            $this->db->join('usuarios as u','u.id_usu = art.id_usu');
+            return  $this->db->get('artigos as art')->result();            
         }
 
         public function cad_artigo()
@@ -18,12 +20,13 @@
                 'subtitulo2' => $this->input->post('subtitulo2'),
                 'secao2' => $this->input->post('secao2'),
                 'subtitulo3' => $this->input->post('subtitulo3'),
-                'secao3' => $this->input->post('secao3')
+                'secao3' => $this->input->post('secao3'),
+                'dt_publicacao' => date('Y-m-d H:i:s')
             );
-            
+
             return $this->db->insert('artigos', $dados);
-            
+
         }
-        
-        
+
+
     }

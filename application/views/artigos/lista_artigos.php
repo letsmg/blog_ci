@@ -22,7 +22,7 @@
                    <td><?= $artigos->titulo ?></td>
                    <td><?= $artigos->subtitulo ?></td>
                    <td><?= $artigos->usuario ?></td>
-                   <td><?= $artigos->dt_publicacao ?></td>
+                   <td><?= date('d/m/Y H:i:s', strtotime($artigos->dt_publicacao)) ?></td>
                </tr>
            <?php
                }

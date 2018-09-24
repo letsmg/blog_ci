@@ -13,9 +13,12 @@
 
 
         public function index(){
+            $this->load->model('m_artigo');
+            $arts['artigos'] = $this->m_artigo->lista_artigos();
+            
             $this->load->view('principal/cabecalho.php');
             $this->load->view('admin/menu_admin');
-            $this->load->view('artigos/lista_artigos.php');
+            $this->load->view('artigos/lista_artigos.php',$arts);
             $this->load->view('principal/rodape.php');
         }
 

@@ -76,10 +76,10 @@
                     url: "<?= base_url('usuarios/cadastra'); ?>",
                     data: $('#cadusu').serialize(),
                     dataType: 'json',
-                    success: function(msg){
+                    success: function(data){
                         //console.log(msg);
-                        $('#ret_cad').html(msg.msg);
-                        $("input[name='csrf_test_name']").val(msg.csrf);
+                        $('#ret_cad').html(data.msg);
+                        $("input[name='csrf_test_name']").val(data.csrf);
                     }
                 });
             }
