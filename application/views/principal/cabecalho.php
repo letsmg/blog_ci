@@ -15,4 +15,4 @@
     <?= link_tag(base_url('css/principal.css')); ?>    
     
 </head>
-<body>
+<body class='d-flex flex-column '>
