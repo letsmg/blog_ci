@@ -1,4 +1,4 @@
-<div class='container d-flex flex-column mt-50'>
+<div class='container mt-150'>
 
     <section class="col-sm-6 offset-sm-3">
 
@@ -48,10 +48,10 @@
                 type: 'post',
                 dataType: 'json',
                 success: function(data){
-                    console.log(data);
+                    //console.log(data);
                     if (data.msg == 1) {
                         //alert('asdf');
-                        location.href = "admin";
+                        location.href = "artigos";
                     } else {
                         $('#ret_login').hide(400);
                         setTimeout(() => {

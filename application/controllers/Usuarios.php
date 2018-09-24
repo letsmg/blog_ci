@@ -16,10 +16,21 @@ class Usuarios extends CI_Controller {
         $this->load->view('principal/rodape.php');
     }
 
+    public function cad_admin(){
+        $this->load->model('m_usuario');
+        $cadastrado['usuario'] = $this->m_usuario->conta_usuarios();
+        
+        $this->load->view('principal/cabecalho.php');
+        $this->load->view('principal/menu_main.php');
+        $this->load->view('usuarios/cad_admin.php',$cadastrado);
+        $this->load->view('principal/rodape.php');
+        
+    }
+
     public function cadastra()
     {
         $this->load->model('m_usuario');
-        $retorno = $this->m_usuario->cadastra();
+        $retorno = $this->m_usuario->cad_admin();
 
         if ($retorno == 'email') {
             $msg = "<div class='alert alert-danger'>E-mail já cadastrado</div>";

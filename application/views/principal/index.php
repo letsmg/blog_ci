@@ -35,11 +35,8 @@
                     </div>
                     <div class="col-sm-6 p-0">
                         <img src="<?= base_url('img/i4.jpg') ?>" alt="i4" class='img-fluid'>
-                    </div>
-                    
+                    </div>                    
                 </div>
-
-                
 
                  
         <?php

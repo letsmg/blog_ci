@@ -9,7 +9,7 @@
         }
 
 
-        public function cadastra(){
+        public function cad_admin(){
 
             $email = $this->input->post('email');
             
@@ -24,7 +24,7 @@
                'nome' => $this->input->post('nome'),
                'email' => $this->input->post('email'),
                'senha' => password_hash($this->input->post('senha'),PASSWORD_DEFAULT),
-               'nivel' => 1,
+               'nivel' => 2,
             );
             
             if($this->db->insert('usuarios', $dados)){

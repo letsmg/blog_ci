@@ -14,8 +14,8 @@
           Artigos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="artigos/novo">Novo Artigo</a>
-          <a class="dropdown-item" href="artigos/listar">Listar Artigos</a>          
+          <a class="dropdown-item" href="<?= base_url('artigos/novo'); ?>">Novo Artigo</a>
+          <a class="dropdown-item" href="<?= base_url('artigos/listar'); ?>">Listar Artigos</a>          
         </div>
       </li>      
       <li class="nav-item">

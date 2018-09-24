@@ -7,7 +7,18 @@
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Cadastro de Usuário</h5>
+            <?php
+                if($usuario > 0){
+            ?>
+                <h5 class="card-title">Página inacessível, já existe um administrador cadastrado.</h5>
+                <p>Por favor faça login, ou se esqueceu a senha, clique 
+                    <a href="recupera_senha_admin">aqui.</a>
+                </p>
+                <p>Ou apague o usuário do banco de dados manualmente.</p>
+            <?php
+                }else{
+            ?>
+                <h5 class="card-title">Cadastro do Administrador do Blog</h5>
 
                 <form id='cadusu' class='form-horizontal'>
 
@@ -41,6 +52,9 @@
                 </form>
 
                 <div id='ret_cad'></div>
+            <?php
+                }
+            ?>
             </div>
         </div>
 
