@@ -14,8 +14,8 @@
 
         public function index(){
             $this->load->view('principal/cabecalho.php');
-            $this->load->view('principal/menu_admin');
-            $this->load->view('artigos/cadastro.php');
+            $this->load->view('admin/menu_admin');
+            $this->load->view('artigos/lista_artigos.php');
             $this->load->view('principal/rodape.php');
         }
 
