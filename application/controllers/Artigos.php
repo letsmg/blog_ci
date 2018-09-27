@@ -46,6 +46,20 @@
                     'msg' => $msg   ];
             echo json_encode($ret);            
         }
+
+        public function edicao()
+        {
+            $this->load->model('m_artigo');
+            $editado = $this->m_artigo->edita();
+
+            if ($editado) {
+                # code...
+            } else {
+                # code...
+            }
+            
+        }
+        
         
                 
     }

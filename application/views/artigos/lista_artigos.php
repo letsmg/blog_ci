@@ -7,6 +7,7 @@
                    <th class="table-primary">Sub-título</th>
                    <th class="table-primary">Usuário</th>
                    <th class="table-primary">Data da publicação</th>
+                   <th class="table-primary"></th>
                </tr>
            </thead>
            <tbody>
@@ -16,13 +17,18 @@
                <td colspan='4'>Nenhum artigos cadastrado ainda.</td>
        <?php
            }else{
-               foreach ($artigos as $artigos){
+               foreach ($artigos as $artigo){
        ?>
                <tr>
-                   <td><?= $artigos->titulo ?></td>
-                   <td><?= $artigos->subtitulo ?></td>
-                   <td><?= $artigos->usuario ?></td>
-                   <td><?= date('d/m/Y H:i:s', strtotime($artigos->dt_publicacao)) ?></td>
+                   <td><?= substr($artigo->titulo,0,10) ?>...</td>
+                   <td><?= substr($artigo->subtitulo,0,10) ?>...</td>
+                   <td><?= $artigo->usuario ?></td>
+                   <td><?= date('d/m/Y H:i:s', strtotime($artigo->dt_publicacao)) ?></td>
+                   <td>
+                        <a href="artigos/edicao/<?= $artigo->id_artigo ?>">
+                            Editar
+                        </a>
+                    </td>
                </tr>
            <?php
                }
