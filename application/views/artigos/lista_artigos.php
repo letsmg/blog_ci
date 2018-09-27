@@ -12,9 +12,9 @@
            </thead>
            <tbody>
        <?php
-           if(!isset($artigos)){
+           if(empty($artigos)){
        ?>
-               <td colspan='4'>Nenhum artigos cadastrado ainda.</td>
+               <td colspan='5'>Nenhum artigos cadastrado ainda.</td>
        <?php
            }else{
                foreach ($artigos as $artigo){
