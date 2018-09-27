@@ -28,5 +28,11 @@
 
         }
 
+        public function edita()
+        {
+            
+        }
+        
+
 
     }

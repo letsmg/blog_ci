@@ -92,3 +92,50 @@
         });
     });
 </script>
+
+
+<?php
+    if($_SERVER['SERVER_NAME'] == 'localhost'){
+            //echo _SERVER['SERVER_NAME'];    
+    ?>
+    <!--  *********************************************** 
+    script para testes 
+    -->
+    <script>
+        $(document).ready(function(){
+            $('#preenche').on('click',function(e){
+                e.preventDefault();
+                //var inputs = new Array();            
+                $('input').each(function(){            
+                    if($(this).attr('name') !== 'csrf_test_name' && $(this).attr('type') !== 'file'){
+                    //inputs.push($(this).val());
+                    $("input[name="+$(this).attr('name')+"]").val($(this).attr('name'));
+                    }
+                });
+                //$('input[type=text]').val($(this).attr('name')); //deixa todos iguais
+                $('input[type=date]').val('1985-12-06');
+                $('input[type=email]').val('teste@teste.com');
+                $('option[value=MG]').attr('selected','selected');
+                $('input[type=checkbox]').attr('checked','checked');
+                $('textarea').each(function(){
+                   if($(this).attr('name') !== 'csrf_test_name' && $(this).attr('type') !== 'file'){
+                   //inputs.push($(this).val());
+                   $("textarea[name="+$(this).attr('name')+"]").val($(this).attr('name'));
+                   }
+               });
+            });
+        });
+    </script>
+
+    <div class='container bg-white text-center'>
+        <a href="#" id="preenche" class="btn btn-success">
+            <span class="fa fa-plus"></span>
+            Preencher inputs
+        </a>
+    </div>
+    <!--  *********************************************** 
+        script para testes 
+    -->
+    <?php
+    }
+?>

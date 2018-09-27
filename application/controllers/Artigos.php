@@ -52,6 +52,8 @@
             $this->load->model('m_artigo');
             $editado = $this->m_artigo->edita();
 
+            echo "ainda em desenvolvimento";
+
             if ($editado) {
                 # code...
             } else {
