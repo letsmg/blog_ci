@@ -4,9 +4,11 @@
     <br>
     <article class="text-center">
         <h2>É seu primeiro acesso</h2>
-        <h3>Por favor cadastre-se</h3>
+        <h3>Por favor 
+            <a href="usuarios/cad_admin">Cadastre-se</a>
+        </h3>
 
-        <a href="usuarios/cadastro">Cadastre-se</a>
+        
     
     </article>
 </main>
