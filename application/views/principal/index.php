@@ -21,7 +21,8 @@
         <?php
             if(!isset($posts)){
         ?>
-                <span class="fa fa-money"></span> Oops, nenhum artigo cadastrado ainda!
+                <h5>Oops, nenhum artigo cadastrado ainda!</h5>
+                <p>Cadastre um artigo para aparecer aqui</p>
 
                 <div class="row">
                     <div class="col-6 p-0">
