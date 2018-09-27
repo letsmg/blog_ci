@@ -14,7 +14,7 @@
        <?php
            if(empty($artigos)){
        ?>
-               <td colspan='5'>Nenhum artigos cadastrado ainda.</td>
+               <td colspan='5'>Nenhum artigo cadastrado ainda.</td>
        <?php
            }else{
                foreach ($artigos as $artigo){
