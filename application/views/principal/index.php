@@ -17,23 +17,23 @@
 
         </h1>
 
-    <article class="col-sm-10 offset-sm-1 text-center">
+    <article class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
         <?php
             if(!isset($posts)){
         ?>
                 <span class="fa fa-money"></span> Oops, nenhum artigo cadastrado ainda!
 
                 <div class="row">
-                    <div class="col-sm-6 p-0">
+                    <div class="col-6 p-0">
                         <img src="<?= base_url('img/i1.jpg') ?>" alt="i1" class='img-fluid'>
                     </div>
-                    <div class="col-sm-6 p-0">
+                    <div class="col-6 p-0">
                         <img src="<?= base_url('img/i2.jpg')  ?>" alt="i2" class='img-fluid'>
                     </div>
-                    <div class="col-sm-6 p-0">
+                    <div class="col-6 p-0">
                         <img src="<?= base_url('img/i3.jpg') ?>" alt="i3" class='img-fluid'>
                     </div>
-                    <div class="col-sm-6 p-0">
+                    <div class="col-6 p-0">
                         <img src="<?= base_url('img/i4.jpg') ?>" alt="i4" class='img-fluid'>
                     </div>                    
                 </div>
