@@ -15,6 +15,6 @@ Aceito comentários, sugestões e críticas construtivas.
 
 O projeto ainda está em andamento, deve estar finalizado no mês 10/2018.
 
-Obs.: Alterei a base url já para "_blog_ci-master_", não precisa renomear, mas se quiser mudar, o arquivo é "application/config/config.php"
+Obs.: Alterei a base url já para <strong>"_blog_ci-master_"</strong>, não precisa renomear, mas se quiser mudar, o arquivo é "application/config/config.php"
 
 Até mais!
