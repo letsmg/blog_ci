@@ -9,7 +9,7 @@
         Bem-vindo ao
         <?php
             if (is_null($nome)) {
-                echo "Nome Temporário!";
+                echo "(seu blog!)";
             } else {
                 echo $nome->nome_blog;
             }
