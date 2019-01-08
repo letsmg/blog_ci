@@ -1,20 +1,13 @@
 Projeto de Blog em CodeIgniter
 
-O intuito desse projeto é ajudar a desenvolvedores que estão começando, além de 
-promover meu trabalho.
+O intuito desse projeto é ajudar a desenvolvedores que estão começando, além de promover meu trabalho.
 
-Utilizo o CI já há 3 anos e achei um framework de fácil aprendizado, portanto muito bom para quem ainda não tem experiência.
+Utilizo o CI já desde 2016 e achei um framework de fácil aprendizado, portanto muito bom para quem ainda não tem experiência.
 
 Atualmente estou estudando Laravel, que se mostrou um framework com muitas opções adicionais e espero estar postando um projeto semelhante em breve.
 
 Neste projeto, disponibilizei funções básicas de um blog que podem ser alteradas como quiserem.
 
-Trarei também uma versão mais completa para venda, através do meu site, que estou refazendo.
-
-Aceito comentários, sugestões e críticas construtivas.
-
-O projeto ainda está em andamento, deve estar finalizado no mês 10/2018.
-
-Obs.: Alterei a base url já para <strong>"blog_ci-master"</strong>, não precisa renomear, mas se quiser mudar, o arquivo é "application/config/config.php"
+O projeto pronto pode ser visto em https://www.manualdoesperto.com.br e em breve https://www.viaderegra.com que será feito em Laravel.
 
 Até mais!
